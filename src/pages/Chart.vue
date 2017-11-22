@@ -20,15 +20,18 @@ export default {
                 }
             },
             grid: {
-                left: '3%',
+                left: '10%',
                 right: '4%',
-                bottom: '3%',
+                bottom: '10%',
                 containLabel: true
             },
             xAxis : [
                 {
+                    name: '书籍名称',
+                    nameLocation: 'center',
+                    nameGap: '30',
                     type : 'category',
-                    data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    data : ['白夜行', '嫌疑人x的献身', '恶意', '秘密', '变身'],
                     axisTick: {
                         alignWithLabel: true
                     }
@@ -36,15 +39,18 @@ export default {
             ],
             yAxis : [
                 {
-                    type : 'value'
+                    type : 'value',
+                    name: '推荐指数',
+                    nameLocation: 'center',
+                    nameGap: '30'
                 }
             ],
             series : [
                 {
-                    name:'直接访问',
+                    name:'推荐指数',
                     type:'bar',
                     barWidth: '60%',
-                    data:[10, 52, 200, 334, 390, 330, 220]
+                    data:[100, 100, 99, 90, 60]
                 }
             ]
       }
@@ -60,7 +66,6 @@ export default {
 <style>
 .chart {
      width: 100%;
-     height: 200px;
-     /*padding: 20px;*/
+     height: 300px;
  }
 </style>
