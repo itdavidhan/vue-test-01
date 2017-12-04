@@ -1,15 +1,18 @@
 <template>
   <div class="header">
-     <h3 class="title" @click="add">东野圭吾小屋</h3>
+     <h3 class="title" @click="addCount">东野圭吾小屋</h3>
   </div>
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
   name: 'common-header',
   methods: {
-    add: function() {
-      this.$store.commit('add');
+    ...mapMutations(['add']),
+    addCount() {
+      // this.$store.commit('add');
+      this.add();
     }
   }
 }
