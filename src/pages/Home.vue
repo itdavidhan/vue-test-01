@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <common-header></common-header>
+    <common-header :showBackBtn="showBackBtn"></common-header>
     <div class="cont">
       <ul class="cont-ul">
         <list v-for="item in items" :key="item.title" :num="item.num" :title="item.title" :img="item.img"></list>
@@ -23,7 +23,8 @@ export default {
   },
   data() {
     return {
-      items: []
+      items: [],
+      showBackBtn: false
     }
   },
   created() {

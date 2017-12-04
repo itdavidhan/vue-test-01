@@ -1,6 +1,7 @@
 <template>
   <div class="header">
      <h3 class="title" @click="addCount">东野圭吾小屋</h3>
+     <a href="javascript:;" class="go-back" @click="goBack" v-show="showBackBtn">返回</a>
   </div>
 </template>
 
@@ -8,11 +9,15 @@
 import {mapMutations} from 'vuex'
 export default {
   name: 'common-header',
+  props: ['showBackBtn'],
   methods: {
     ...mapMutations(['add']),
     addCount() {
       // this.$store.commit('add');
       this.add();
+    },
+    goBack() {
+      window.history.back();
     }
   }
 }
@@ -32,6 +37,13 @@ export default {
     height: 60px;
     line-height: 60px;
     text-align: center;
+  }
+  .go-back {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    text-decoration: none;
+    color: #333;
   }
 }
 </style>

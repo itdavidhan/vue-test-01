@@ -29,4 +29,9 @@ export default {
   margin: 10px auto;
   img
     width: 70%;
+  .book-list-name
+    font-weight: bold;
+  a 
+    text-decoration: none;
+    color: #333;
 </style>

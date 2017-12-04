@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'common-footer',
   data() {
@@ -13,9 +14,10 @@ export default {
     }
   },
   computed: {
-    count() {
-      return this.$store.state.count
-    }
+    // count() {
+    //   return this.$store.state.count
+    // },
+    ...mapState(['count'])
   }
 }
 </script>

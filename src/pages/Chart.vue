@@ -1,16 +1,28 @@
 <template>
-  <div id="chart-cont" class="chart">
+  <div class="container">
+    <common-header :showBackBtn="showBackBtn"></common-header>
+    <div class="cont">
+       <div id="chart-cont" class="chart"></div>
+    </div>
+    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
 
 import echarts from 'echarts'
+import CommonHeader from '../components/CommonHeader'
+import CommonFooter from '../components/CommonFooter'
 
 export default {
   name: 'chart',
+  components: {
+    CommonHeader,
+    CommonFooter
+  },
   data() {
     return {
+      showBackBtn: true,
       barOption: {
         color: ['#3398DB'],
             tooltip : {
@@ -63,9 +75,20 @@ export default {
 }
 </script>
 
-<style>
-.chart {
-     width: 100%;
-     height: 300px;
- }
+<style lang="less">
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .cont {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    .chart {
+         width: 100%;
+         height: 300px;
+     }
+  }
+}
 </style>
