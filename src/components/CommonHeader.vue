@@ -1,12 +1,17 @@
 <template>
   <div class="header">
-     <h3 class="title">东野圭吾小屋</h3>
+     <h3 class="title" @click="add">东野圭吾小屋</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'common-header'
+  name: 'common-header',
+  methods: {
+    add: function() {
+      this.$store.commit('add');
+    }
+  }
 }
 </script>
 

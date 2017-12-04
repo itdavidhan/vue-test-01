@@ -1,12 +1,22 @@
 <template>
   <div class="footer">
-     footer
+     footer {{count}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'common-footer'
+  name: 'common-footer',
+  data() {
+    return {
+      
+    }
+  },
+  computed: {
+    count() {
+      return this.$store.state.count
+    }
+  }
 }
 </script>
 

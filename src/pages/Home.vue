@@ -3,7 +3,7 @@
     <common-header></common-header>
     <div class="cont">
       <ul class="cont-ul">
-        <list v-for="item in items" :num="item.num" :title="item.title" :img="item.img"></list>
+        <list v-for="item in items" :key="item.title" :num="item.num" :title="item.title" :img="item.img"></list>
       </ul>
     </div>
     <common-footer></common-footer>
