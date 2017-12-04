@@ -38,20 +38,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .container {
   position: relative;
   width: 100%;
   height: 100%;
-}
-.container .cont {
-  position: absolute;
-  left: 0;
-  top: 60px;
-
-}
-.container .cont .cont-ul {
-  overflow: hidden;
-  margin-bottom: 60px;
+  .cont {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    .cont-ul {
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+  }
 }
 </style>

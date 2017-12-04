@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .header {
   position: fixed;
   left: 0;
@@ -27,11 +27,11 @@ export default {
   height: 60px;
   background-color: #EEE;
   z-index: 100;
-}
-.header .title {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
+  .title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+  }
 }
 </style>

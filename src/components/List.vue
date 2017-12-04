@@ -22,13 +22,11 @@ export default {
 }
 </script>
 
-<style>
-.book-item {
+<style lang="stylus">
+.book-item
   float: left;
   width: 50%;
   margin: 10px auto;
-}
-.book-item img {
-  width: 70%;
-}
+  img
+    width: 70%;
 </style>
