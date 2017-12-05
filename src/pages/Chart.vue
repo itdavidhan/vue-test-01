@@ -75,16 +75,10 @@ export default {
 }
 </script>
 
+<style lang="less" src="../css/common.less"></style>
 <style lang="less">
 .container {
-  position: relative;
-  width: 100%;
-  height: 100%;
   .cont {
-    position: absolute;
-    left: 0;
-    top: 60px;
-    width: 100%;
     .chart {
          width: 100%;
          height: 300px;

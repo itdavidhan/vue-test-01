@@ -1,6 +1,6 @@
 <template>
   <li class="book-item">
-    <router-link to="/detail"  class="book-list-link">
+    <router-link :to="{ path: 'detail', query: { 'book_id': id }}" class="book-list-link">
       <div class="book-list-pic">
         <img :src="img" alt="">
       </div>
@@ -18,7 +18,7 @@
 
 export default {
   name: 'list',
-  props: ['num', 'title', 'img']
+  props: ['num', 'title', 'img', 'id']
 }
 </script>
 
